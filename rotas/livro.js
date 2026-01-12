@@ -3,11 +3,11 @@ const { getLivros } = require("../controladores/livro")
 
 const router = Router()
 
-router.get('/', (req, res) => {
-    res.send("Olá mundo da Alura do Brasil!")
-})
+router.get('/', getLivros)
 
-router.post('/', getLivros)
+router.post('/', (req, res) => {
+    res.send("Você fez uma requisição do tipo post")
+})
 
 router.patch('/', (req, res) => {
     res.send('Você fez uma requisição do tipo patch')
