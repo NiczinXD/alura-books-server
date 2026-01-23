@@ -13,8 +13,4 @@ router.patch('/:id', patchLivro)
 
 router.delete('/:id', deleteLivro)
 
-router.delete('/', (req, res) => {
-    res.send('Você fez uma requisição do tipo delete')
-})
-
 module.exports = router
